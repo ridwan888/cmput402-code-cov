@@ -30,7 +30,7 @@ jobs:
     #       for test coverage reports
     - name: Run Covecov Report
       env:
-        CODECOV_TOKEN: ${{ secrets.MY_CODECOV_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.MY_CODECOV_TOKEN }}
       run: |
         ./gradlew jacocoTestReport
         bash <(curl -s https://codecov.io/bash)
